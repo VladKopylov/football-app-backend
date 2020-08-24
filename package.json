@@ -4,8 +4,23 @@
   "description": "GraphQL server for football app",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon --ext js,graphql --exec babel-node ./src/index.js",
+    "get-schema": "graphql get-schema -p prisma"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.11.4",
+    "@babel/node": "^7.10.5",
+    "@babel/preset-env": "^7.11.0",
+    "graphql-cli": "^4.0.0"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "graphql-yoga": "^1.18.3",
+    "jsonwebtoken": "^8.5.1",
+    "nodemon": "^2.0.4",
+    "prisma-binding": "^2.3.16"
+  }
 }
